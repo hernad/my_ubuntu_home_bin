@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#echo $@
+/usr/bin/i586-mingw32msvc-windres -i /usr/i586-mingw32msvc/include $@
+

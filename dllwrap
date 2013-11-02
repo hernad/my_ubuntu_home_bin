@@ -1,0 +1,6 @@
+echo mingw32 gcc mora biti prvi u path-u
+
+PATH=/usr/i586-mingw32msvc/bin:$PATH
+
+/usr/bin/i586-mingw32msvc-dllwrap $@
+
