@@ -17,8 +17,12 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/postgresql.list'
+
 sudo apt-get update -y
 
 sudo apt-get -y install oracle-java7-installer
 sudo apt-get install -y google-chrome-stable
-
+sudo apt-get install -y postgresql-9.3 pgadmin3

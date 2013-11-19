@@ -11,4 +11,5 @@ else
 fi
 
 export UBUNTU_MENUPROXY=0
-./eclipse -vmargs -Xmx1536M
+./eclipse 
+# -vmargs -Xmx1536M
