@@ -16,5 +16,7 @@ files="$files $a"
 echo $a
 done
 
-$vlc  $files --sout-keep --sout="#gather:transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2}:standard{mux=ts,dst=all.$ext,access=file}" vlc://quit
+$vlc  $files --sout-keep --sout="#gather:transcode{vcodec=h264,vb=0,scale=0,acodec=mpga,ab=128,channels=2}:standard{mux=ts,dst=all.$ext,access=file}"
+
+#vlc://quit
 
