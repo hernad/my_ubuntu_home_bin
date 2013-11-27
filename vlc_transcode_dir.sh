@@ -21,11 +21,27 @@ for a in *\.*; do
 
 echo $a
 
-rm $dst/$a.$ext
+
+file=$dst/$a.$ext
+
+rm $file
 
 # iz nekog razloga vlc jednostavno ne uradi posao, a kod novog pokretanja uradi !?
-until [ -f $dst/$a.$ext ] ; do
+until [ -f $file ] ; do
+  
   transcode
+
+  f_size=$(du -b "$file" | cut -f 1)
+  echo $f_size
+  if [ -f $file ] ; then
+    if [ $f_size -ge 1024 ] ; then
+       echo "velicina generisanog fajla mi izgleda ok ($f_size)"
+    else
+       echo "velicina generisanog fajla je premalena ($f_size) brisem ga da ponovim generaciju ?!"
+       rm $file
+    fi
+  fi
+
 done
 
 #ovo ne pije vode exit code je uvijek 0 kod vlc-a :(
