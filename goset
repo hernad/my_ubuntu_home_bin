@@ -1,0 +1,3 @@
+export GOPATH=/home/bringout/dev
+export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
+

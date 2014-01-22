@@ -1,0 +1,11 @@
+export QT_ROOT=~/Qt5.2.0/5.2.0/gcc_64
+export PATH=$QT_ROOT/bin:$PATH
+export PKG_CONFIG_PATH=$QT_ROOT/lib/pkgconfig
+
+#pkg-config --cflags Qt5Core
+#-I/home/bringout/Qt5.2.0/5.2.0/gcc_64/include/QtCore -I/home/bringout/Qt5.2.0/5.2.0/gcc_64/include
+
+QT5VERSION=`pkg-config --cflags Qt5Core | sed 's/^.*\(5\..\..\).*/\1/g'`
+export CGO_CPPFLAGS=-I$QT_ROOT/include/QtCore/$QT5VERSION/QtCore
+
+export LD_LIBRARY_PATH=$QT_ROOT/lib
