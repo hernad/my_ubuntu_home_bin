@@ -1,0 +1,14 @@
+#export LO_ROOT=/usr/local/lib/libreoffice
+export LO_ROOT=/opt/knowhowERP/LO/lib/libreoffice
+
+export PATH=$LO_ROOT/program:$PATH
+export PKG_CONFIG_PATH=$LO_ROOT/lib/pkgconfig
+
+#pkg-config --cflags Qt5Core
+#-I/home/bringout/Qt5.2.0/5.2.0/gcc_64/include/QtCore -I/home/bringout/Qt5.2.0/5.2.0/gcc_64/include
+
+#export CGO_CPPFLAGS=-I$QT_ROOT/include/QtCore/$QT5VERSION/QtCore
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LO_ROOT/program:$LO_ROOT/ure/lib
+
+export URE_BOOTSTRAP=file://$LO_ROOT/program/fundamentalrc

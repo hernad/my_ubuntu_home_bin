@@ -1,9 +1,15 @@
 echo "pozovi sa source komandom"
 
+echo "obavezno: export LD_LIBRARY_PATH="
 export LD_LIBRARY_PATH=
 
-./configure --without-java --enable-gtk3 --enable-static-gtk --prefix=/opt/knowhowERP/LO --without-doxygen --with-system-cairo --disable-gstreamer-0-10 --without-help --without-myspell-dicts --disable-extensions --disable-python --disable-odk
+sudo apt-get install -y libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libgstreamer-plugins-good0.10-dev
 
+cd ~/dev/libreoffice/core
+
+./autogen.sh --without-java --enable-gtk3  --prefix=/opt/knowhowERP/LO --without-doxygen --with-system-cairo --disable-gstreamer-0-10 --without-help --without-myspell-dicts --enable-dbgutil -enable-debug 
+
+#---enable-mergelibs
 
 
 echo setuj environment varijable:

@@ -1,4 +1,5 @@
 export QT_ROOT=~/Qt5.2.0/5.2.0/gcc_64
+export QTDIR=$QT_ROOT
 export PATH=$QT_ROOT/bin:$PATH
 export PKG_CONFIG_PATH=$QT_ROOT/lib/pkgconfig
 
