@@ -1,0 +1,7 @@
+
+export HB_ROOT=/opt/knowhowERP/hbout
+export HB_INSTALL_PREFIX=$HB_ROOT
+export HB_LIB_INSTALL=$HB_ROOT/lib/harbour
+HB_WITH_QT=no
+
+export PATH=$HB_ROOT/bin:$PATH

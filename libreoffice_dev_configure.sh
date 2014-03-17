@@ -11,6 +11,7 @@ cd ~/dev/libreoffice/core
 
 #---enable-mergelibs
 
+export GLADE_CATALOG_SEARCH_PATH=/opt/knowhowERP/LO/lib/libreoffice/share/glade
 
 echo setuj environment varijable:
 echo SAL_USE_VCLPLUGIN=gtk3 GDK_BACKEND=broadway /opt/knowhowERP/LO/program/soffice -calc
