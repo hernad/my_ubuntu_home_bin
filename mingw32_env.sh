@@ -1,4 +1,5 @@
 #!/bin/sh
+
 export CC=i586-mingw32msvc-gcc
 export CXX=i586-mingw32msvc-g++
 export CPP=i586-mingw32msvc-cpp
@@ -14,3 +15,9 @@ export MINGW32_INCLUDES=/usr/i586-mingw32msvc/include/
  
 export PATH="/usr/i586-mingw32msvc/bin:$PATH"
 #export PKG_CONFIG_PATH="$HOME/win32-x264/lib/pkgconfig/"
+
+export HB_PLATFORM=win
+export HB_INSTALL_PREFIX=/opt/knowhowERP/hbwin
+export HB_CCPREFIX=i586-mingw32msvc-
+#/opt/knowhowERP/hbout/bin/hbmk2 -plat=win -gtwvt test.prg
+
