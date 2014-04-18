@@ -2,6 +2,13 @@
 export HB_ROOT=/opt/knowhowERP/hbout
 export HB_INSTALL_PREFIX=$HB_ROOT
 export HB_LIB_INSTALL=$HB_ROOT/lib/harbour
-HB_WITH_QT=no
 
 export PATH=$HB_ROOT/bin:$PATH
+
+echo "set for hbqt 5.2.1"
+
+#HB_WITH_QT=no
+
+export HB_WITH_QT=/home/bringout/dev/Qt5.2.1/5.2.1/gcc_64/include
+export HB_USER_CFLAGS="-fPIC"
+

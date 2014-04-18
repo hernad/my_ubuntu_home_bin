@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export HB_PLATFORM=linux
+export HB_INSTALL_PREFIX=/opt/knowhowERP/hb32
+#export HB_CCPREFIX=i586-mingw32msvc-
+
+#apt-get install g++-multilib libc6-dev-i386
+#sudo apt-get install comerr-dev:i386
+#sudo apt-get install libpq-dev:i386 p11-kit:i386
+
+export HB_HOST_BIN_DIR=/opt/knowhowERP/hb32/bin
+
+export HB_USER_CFLAGS="-m32"
+export HB_USER_LDFLAGS="-m32 -L/usr/lib32"
+
+# shared lib
+export HB_USER_DFLAGS="-m32 -L/usr/lib32"
